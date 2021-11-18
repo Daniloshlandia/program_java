@@ -8,7 +8,7 @@ number of days in that month.
 In this first version of the program, 
 assume that February always has 28 days.
 
-->Make your code even better! Have the user input a month name, 
+-> Make your code even better! Have the user input a month name, 
 but also have the user input yes or no in response to the question Is it a leap year?
 entre 4 excepto los multiplos de 100 que son multiplos ademas de 400.
 */
