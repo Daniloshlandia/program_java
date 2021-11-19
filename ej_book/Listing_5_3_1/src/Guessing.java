@@ -17,7 +17,7 @@ public class Guessing {
         out.println(" ************ "); 
         out.println();
 
-        out.print("Enter an int from 1 to 10: ");
+        out.print("Enter an int from 1 to 100: ");
         int inputNumber = keyboard.nextInt();
         numGuess++;
 
@@ -26,27 +26,28 @@ public class Guessing {
             out.println("Estas un poco alto ");
             out.println();
             out.println("Try again...");
+            inputNumber = keyboard.nextInt();
+            numGuess++;
+
         }else if (inputNumber < randomNumber ) {
+            
             out.print("Esta un poco abajo ");
             out.println();
             out.println("Try again...");
+            inputNumber = keyboard.nextInt();
+            numGuess++;
+
         }else{
             
             out.print("You win after ");
             out.println();
-            inputNumber = keyboard.nextInt(); 
-            numGuess++;
+      
         }
 
             
           
-      } while (inputNumber == randomNumber);  
-       
+      } while (inputNumber != randomNumber);  
 
-      
-            
-        
-       
         out.println(numGuess + " guess.");
 
         keyboard.close();
