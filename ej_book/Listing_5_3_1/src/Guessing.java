@@ -1,5 +1,6 @@
 import static java.lang.System.out;
 import java.util.Scanner;
+
 import java.util.Random;
 
 
@@ -20,21 +21,27 @@ public class Guessing {
         out.print("Enter an int from 1 to 100: ");
         int inputNumber = keyboard.nextInt();
         numGuess++;
+        
+        
+            
+        
 
       do {
-        if (inputNumber > randomNumber) {
+        if (inputNumber > randomNumber )  {
             out.println("Estas un poco alto ");
             out.println();
             out.println("Try again...");
             inputNumber = keyboard.nextInt();
+            out.print(inputNumber);
             numGuess++;
 
         }else if (inputNumber < randomNumber ) {
             
-            out.print("Esta un poco abajo ");
+            out.print(" Esta un poco abajo ");
             out.println();
             out.println("Try again...");
             inputNumber = keyboard.nextInt();
+            out.print(inputNumber);
             numGuess++;
 
         }else{
@@ -46,8 +53,9 @@ public class Guessing {
 
             
           
-      } while (inputNumber != randomNumber);  
+      } while (inputNumber != randomNumber && inputNumber >= 0);  
 
+        out.println(inputNumber + "Este numero no es positivo");
         out.println(numGuess + " guess.");
 
         keyboard.close();
