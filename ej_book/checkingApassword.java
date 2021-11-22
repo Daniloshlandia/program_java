@@ -1,4 +1,4 @@
-import static java.lang.System.*;
+import static java.lang.System.out;
 import java.util.Scanner;
 
 
@@ -9,8 +9,8 @@ public class checkingApassword {
     public static void main(String[] args) {
         out.print("What's the password");
 
-        Scanner.keyboard = new Scanner(in);
-        String password = keyboard = keyboard.next();
+        Scanner keyboard = new Scanner(System.in);
+        String password = keyboard.next();
 
         out.println("you Typed >>" + password + "<<");
         out.println();
