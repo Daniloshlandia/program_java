@@ -11,12 +11,12 @@ public class DeleteEvidence {
         
         do {
 
-            out.print("Delete evidence: ");
+            out.print("Delete evidence? (y/n) ");
             reply = keyboard.findWithinHorizon(".", 0).charAt(0);
             
-        } while (reply != 'y' && reply != 'n');
+        } while (reply != 'y' && reply != 'Y' && reply !='n' && reply !='N');
 
-        if (reply == 'y'){
+        if (reply == 'y' || reply == 'Y'){
             out.println("Okay here we goes..");
             evidence.delete();
             out.println("The evidence deleted.");
@@ -25,5 +25,10 @@ public class DeleteEvidence {
             out.println("Sorry, buddy. Just asking.");
         }
         keyboard.close();
+        try {
+            out.println("Looking for " + evidence.getCanonicalPath());
+        } catch (java.io.IOException e){
+            e.printStackTrace();  
+        }
     }
 }
