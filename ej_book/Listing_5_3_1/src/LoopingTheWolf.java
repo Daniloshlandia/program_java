@@ -23,9 +23,9 @@ public class LoopingTheWolf {
     */
     for (int row = 0; row < 5; row++) {
         for (int column = 0; column <= row; column++){
-            System.out.print("*");
+            out.print("*");
         }
-        System.out.println();
+            out.println();
     }
 
 
