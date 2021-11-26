@@ -1,24 +1,21 @@
-import static java.lang.System.out;
-
 public class PedidosPizza {
     public static void main(String[] args) {
-        PizzaContent Pizza;
+      Pizza p1 = new Pizza("margarita", "mediana");
+      Pizza p2 = new Pizza("funghi", "familiar");
+      p2.sirve();
+      Pizza p3 = new Pizza("cuatro quesos", "mediana");
 
-        Pizza  = new PizzaContent();
+      p1.display();
+      p2.display();
+      p3.display();
+      //System.out.println(p1);
+      //System.out.println(p2);
+      //System.out.println(p3);
+      p2.sirve();
+      System.out.println("pedidas: " + Pizza.getTotalPedidas());
+      System.out.println("servidas: " + Pizza.getTotalServidas());
 
-        Pizza.typep = "Margarita ";
-        Pizza.typeq = "funghi ";
-        Pizza.typer = "cuatro quesos ";
-        Pizza.state1 =  ",Pedida ";
-        Pizza.state2 = "Servida ";
-        Pizza.size  = "mediana ";
-        Pizza.size1 = "familiar ";
-
-        out.println("Pizza "+ Pizza.typep + Pizza.size + Pizza.state1);
-        out.println("Pizza "+ Pizza.typeq + Pizza.size1 + Pizza.state2);
-        out.println(Pizza.typer + Pizza.size);
-
-        out.println("Pedidas: " + Pizza.getTotalPedidas())
 
     }
-}
+  }
+  

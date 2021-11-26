@@ -16,6 +16,7 @@ public class UseAccount {
         yourAccount.address = "3 story street Salem";
         yourAccount.balance = 5.04;
 
+        /*
         out.print(myAccount.name);
         out.print(" (");
         out.print(myAccount.address);
@@ -28,5 +29,18 @@ public class UseAccount {
         out.print(yourAccount.address);
         out.print(") has $");
         out.print(yourAccount.balance);
+        */
+        myAccount.display();
+        out.print(" plus $");
+        out.print(myAccount.getInterest(5.00));
+        out.println(" Interest ");
+        out.println();
+        yourAccount.display();
+
+        double yourInterestRate = 7.00;
+        out.print(" plus $");
+        double yourInterestAmount = yourAccount.getInterest(yourInterestRate);
+        out.print(yourInterestAmount);
+        out.println(" Interest ");
     }
 }
